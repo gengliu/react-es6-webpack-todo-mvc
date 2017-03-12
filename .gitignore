@@ -2,7 +2,7 @@
 # IDE, OS
 .DS_Store
 *.iml
-.idea/*
+.idea/
 dist/
 
 # npm
