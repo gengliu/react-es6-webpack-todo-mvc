@@ -1,8 +1,17 @@
-
-
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './componnts/TodoApp'
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
+import reducer from './reducers'
+
+import App from './components/TodoApp'
 import 'todomvc-common/base.css'
 import 'todomvc-app-css/index.css'
- ReactDOM.render(<App/>,document.getElementsByClassName('todoapp')[0]);
+
+let store = createStore(reducer);
+
+ReactDOM.render(
+  (<Provider store={store}>
+    <App/>
+  </Provider>),
+  document.getElementsByClassName('todoapp')[0]);
