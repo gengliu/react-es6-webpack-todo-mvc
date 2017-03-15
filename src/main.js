@@ -7,6 +7,7 @@ import reducer from './reducers'
 import App from './components/TodoApp'
 import 'todomvc-common/base.css'
 import 'todomvc-app-css/index.css'
+import 'babel-polyfill';
 
 let store = createStore(reducer);
 
